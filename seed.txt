@@ -1,0 +1,43 @@
+{
+    "name":"Netflix",
+    "about":"Netflix online",
+    "website":"http://www.netflix.com"
+}
+{
+    "name":"Prime",
+    "about":"Amazon prime online",
+    "website":"http://www.primevideo.com"
+}
+{
+    "name":"ErosNow",
+    "about":"Eros online",
+    "website":"http://www.eros.com"
+}
+
+{
+    "title":"Kevin Hart",
+    "storyline":"standup",
+    "platform":4,
+    "active":true
+}
+
+{
+    "title":"Trevor Noah",
+    "storyline":"standup",
+    "platform":4,
+    "active":true
+}
+
+{
+    "title":"Koi load nahi",
+    "storyline":"Jaspreet singh standup",
+    "platform":5,
+    "active":true
+}
+
+{
+    "title":"Love Aaj Kal",
+    "storyline":"Romcom",
+    "platform":6,
+    "active":true
+}
