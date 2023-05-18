@@ -12,9 +12,23 @@ from watchlist_app.api.serializers import (
 
 
 # Class Based views
+class ReviewCreate(generics.CreateAPIView):
+    serializer_class = ReviewSerializer
+
+    def perform_create(self, serializer):
+        pk = self.kwargs.get("pk")
+        newwatchlist = WatchList.objects.get(pk=pk)
+        serializer.save(watchlist=newwatchlist)
+
+
 class ReviewList(generics.ListCreateAPIView):
     queryset = Review.objects.all()
     serializer_class = ReviewSerializer
+
+    # Fetch all the reviews for a particular watchlist
+    def get_queryset(self):
+        pk = self.kwargs["pk"]
+        return Review.objects.filter(watchlist=pk)
 
 
 class ReviewDetail(generics.RetrieveUpdateDestroyAPIView):
