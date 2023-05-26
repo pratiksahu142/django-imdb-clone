@@ -50,6 +50,7 @@ class ReviewCreate(generics.CreateAPIView):
 class ReviewList(generics.ListCreateAPIView):
     queryset = Review.objects.all()
     serializer_class = ReviewSerializer
+    permission_classes = [IsAuthenticated]
 
     # Fetch all the reviews for a particular watchlist
     def get_queryset(self):
